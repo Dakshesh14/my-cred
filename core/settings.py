@@ -10,10 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+
 import os
 import dotenv
 
 from pathlib import Path
+
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,7 +37,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "127.0.0.1:8000",
+    "127.0.0.1",
     "my-cred.herokuapp.com",
 ]
 
@@ -172,3 +175,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 EN_KEY = os.environ["EN_KEY"]
+
+
+# knox
+
+
+REST_KNOX = {
+    'TOKEN_TTL': timedelta(weeks=1),
+}

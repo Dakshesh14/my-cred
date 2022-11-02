@@ -5,9 +5,10 @@ from utils.crypto import encrypt
 
 
 class PasswordStore(models.Model):
-    site_name = models.CharField(max_length=255)
-    description = models.TextField()
-    site_url = models.URLField(max_length=520)
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    site_url = models.URLField(max_length=520, blank=True)
+    site_username = models.CharField(max_length=255, blank=True)
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,

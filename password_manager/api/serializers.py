@@ -13,8 +13,9 @@ class PasswordStoreSerializer(serializers.ModelSerializer):
         model = PasswordStore
         fields = (
             'id',
-            'site_name',
+            'title',
             'description',
+            'site_username',
             'site_url',
             'dec_password',
             'password',

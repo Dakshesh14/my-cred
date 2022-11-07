@@ -5,4 +5,4 @@ from .models import PasswordStore
 
 @admin.register(PasswordStore)
 class PasswordStoreAdmin(admin.ModelAdmin):
-    pass
+    readonly_fields = ('password',)

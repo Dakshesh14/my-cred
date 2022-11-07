@@ -5,6 +5,7 @@ from .serializers import PasswordStoreSerializer
 from password_manager.models import PasswordStore
 # utils
 from utils.permissions import IsOwner
+from utils.crypto import decrypt
 
 
 class PasswordStoreAPI(generics.ListCreateAPIView):
@@ -23,3 +24,11 @@ class PasswordDetailAPI(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated, IsOwner]
 
     queryset = PasswordStore.objects.all()
+
+    def patch(self, request, *args, **kwargs):
+        password = request.data.get("password")
+        if password is None:
+            request.data["password"] = decrypt(
+                self.get_object().password
+            )
+        return super().patch(request, *args, **kwargs)

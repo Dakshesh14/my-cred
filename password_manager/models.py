@@ -7,8 +7,10 @@ from utils.crypto import encrypt
 class PasswordStore(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    site_url = models.URLField(max_length=520, blank=True)
-    site_username = models.CharField(max_length=255, blank=True)
+
+    site_url = models.URLField(max_length=520, blank=True, null=True)
+    site_username = models.CharField(max_length=255, blank=True, null=True)
+    meta = models.JSONField(default=dict)
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -28,4 +30,4 @@ class PasswordStore(models.Model):
         super(PasswordStore, self).save(*args, **kwargs)
 
     def __str__(self) -> str:
-        return self.site_name
+        return self.title

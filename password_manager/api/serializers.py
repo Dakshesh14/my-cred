@@ -21,6 +21,7 @@ class PasswordStoreSerializer(serializers.ModelSerializer):
             'password',
             'created_at',
             'updated_at',
+            'meta',
         )
         extra_kwargs = {
             "password": {"write_only": True}

@@ -18,29 +18,29 @@ I have used the following technologies:
 
 ## How do I use this?
 
-1.) Setup environment variables, by taking the .env.example file as reference. (You cannot use same file you will have to create a .env file or change the name of .env.example to .env).
-2.) Make and activate virtual environment, by using the following commands:
-`python3 -m venv env source env/bin/activate`
-3.) Install the requirements, by using the following command:
-`pip install -r requirements.txt`
-4.) Make migrations, by using the following command:
+1. Setup environment variables, by taking the .env.example file as reference. (You cannot use same file you will have to create a .env file or change the name of .env.example to .env).
+2. Make and activate virtual environment, by using the following commands:
+   `python3 -m venv env source env/bin/activate`
+3. Install the requirements, by using the following command:
+   `pip install -r requirements.txt`
+4. Make migrations, by using the following command:
 
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-5.) (Optionally)Create a superuser, by using the following command:
+5. (Optionally)Create a superuser, by using the following command:
 
-    ```
-    python manage.py createsuperuser
-    ```
+   ```
+   python manage.py createsuperuser
+   ```
 
-6.) Run the server, by using the following command:
+6. Run the server, by using the following command:
 
-    ```
-    python manage.py runserver
-    ```
+   ```
+   python manage.py runserver
+   ```
 
 Now go to the browser and type `http://127.0.0.0:8000/admin` to access admin panel. NOTE: You need to create a superuser first(step 5).
 

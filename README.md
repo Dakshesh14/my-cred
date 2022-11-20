@@ -11,10 +11,10 @@ I have used the following technologies:
 
 ## Features
 
-1.) Uses rest API, therefore can be used anywhere.
-2.) Encrypt the password before storing it to the database.
-3.) Uses token based authentications.
-4.) Uses MVC architecture.
+1. Uses rest API, therefore can be used anywhere.
+2. Encrypt the password before storing it to the database.
+3. Uses token based authentications.
+4. Uses MVC architecture.
 
 ## How do I use this?
 

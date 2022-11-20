@@ -60,17 +60,16 @@ You can use the endpoints to:
 
 ## Future Scope
 
-1.) Use OTP based authentication, to avoid remembering even one password.
-2.) Use asymmetric encryption.
-3.) Use JWT for authentication.
+1. Use OTP based authentication, to avoid remembering even one password.
+2. Use asymmetric encryption.
+3. Use JWT for authentication.
+4. Use test based development.
 
 ## How do I contribute?
 
-1.) Fork the repository.
-2.) Clone the repository.
-3.) Make changes.
-4.) Create a pull request.
+1. Fork the repository.
+2. Clone the repository.
+3. Make changes.
+4. Create a pull request.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
